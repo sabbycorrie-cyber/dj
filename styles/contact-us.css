@@ -1,25 +1,44 @@
+.container {
+    background-image: url("../images/party.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0;
+}
+
 .form__container {
-    background-color: rgb(0, 0, 0, 0.5);
+    background-color: black;
     border: none;
     border-radius: 30px;
     margin: 30px 0 30px 0;
-    max-width: 700px;
+    max-width: 400px;
     width: 100%;
-    min-height: 500px;
+    min-height: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
     justify-self: center;
+    padding: 20px;
 }
 
 .contact-us {
+    color: white;
+    font-family: roboto, sans-serif;
+    font-size: 60px;
+    font-weight: bold;
     text-align: center;
+    text-shadow: 8px 4px 4px rgba(118, 177, 131, 0.5);
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 textarea {
-    color: white;
+    background-color: white;
+    color: black;
     font-family: roboto, sans-serif;
     margin-top: 2px;
     background: none;
@@ -28,11 +47,13 @@ textarea {
     max-width: 500px;
     width: 100%;
 }
+
 textarea:hover {
-    background-color: #2d2d2d;
+    background-color: rgb(238, 252, 199);
 }
 
 input {
+    background-color: white;
     color: black;
     font-family: roboto, sans-serif;
     margin-bottom: 10px;
@@ -43,31 +64,62 @@ input {
     max-width: 500px;
     width: 100%;
 }
+
 input:hover {
-    background-color: #bafc6a;
+    background-color: rgb(238, 252, 199);
 }
 
 .input-field-name {
+    background-color: white;
+    color: black;
+    font-family: roboto, sans-serif;
     max-width: 47%;
 }
 
 .input-field-lastName {
+    background-color: white;
+    color: black;
     position: relative;
     left: 10px;
+    font-family: roboto, sans-serif;
+}
+
+.input-field-email {
+    background-color: white;
+    color: black;
+    font-family: roboto, sans-serif;
+    max-width: 100%;
+}
+
+.message-input-field {
+    background-color: white;
+    color: black;
+    font-family: roboto, sans-serif;
+    max-width: 100%;
 }
 
 label {
     font-family: roboto, sans-serif;
 }
 
-.btn__submit {
+.btn {
+    background-color: white;
+    font-family: roboto, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 2px 1px 1px rgba(118, 177, 131, 0.5);
+    height: 40px;
+    width: 80px;
+    border: none;
     margin-top: 20px;
     margin-bottom: 20px;
-    display: flex;
-    justify-self: center;    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-.btn__submit:hover {
-    background-color: #d8f2b8;
+
+.btn:hover {
+    background-color: #70c40a;
     text-decoration: none;
     font-weight: bold;
 }
