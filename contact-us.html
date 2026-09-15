@@ -4,37 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/contact-us.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
     <title>Contact Us</title>
 </head>
 
 <body>
     <!-- FORM -->
-    <main class="form__container">
-        <form action="">
-            <h2 class="contact-us">Contact Us</h2>
-        <!-- name -->
-        <div class="container__input-field-name">
-            <label for="first-name" class="label">Your name</label>
-            <br>
-            <input type="text" placeholder="First name" id="first-name" class="input-field-name" required autofocus>
-            <input type="text" placeholder="Last name" class="input-field-name input-field-lastName">
-            <br>
+    <main class="container">
+            <div class="form__container">
+                <form action="">
+                    <h2 class="contact-us">Contact Us</h2>
+                <!-- name -->
+                <div class="container__input-field-name">
+                    <label for="first-name" class="label">Your name</label>
+                    <br>
+                    <input type="text" placeholder="First name" id="first-name" class="input-field-name" required autofocus>
+                    <input type="text" placeholder="Last name" class="input-field-name input-field-lastName">
+                    <br>
+                </div>
+                <!-- email -->
+                <div class="container__input-field-email">
+                    <label for="email" class="label">Your email</label>
+                    <br>
+                    <input type="email" placeholder="example@email.com" id="email" class="input-field input-field-email" required>
+                    <br>
+                </div>
+                <!-- message -->
+                <div class="container__input-field-message">
+                    <label for="message">Your message</label>
+                    <br>
+                    <textarea name="message" placeholder="Message" required maxlength="400" rows="10" id="message" class="input-field message-input-field"></textarea>
+                    <br>
+                </div>
+                <!-- button -->
+                <div class="container__button">
+                    <button type="submit" class="btn">Submit</button>
+                </div>
+                </form>
         </div>
-        <!-- email -->
-            <label for="email" class="label">Your email</label>
-            <br>
-            <input type="email" placeholder="eg.example@email.com" id="email" class="input-field" required>
-            <br>
-        <!-- message -->
-            <label for="message">Your message</label>
-            <br>
-            <textarea name="message" placeholder="Message" required maxlength="400" rows="10" id="message" class="input-field"></textarea>
-            <br>
-        <!-- button -->
-            <button type="submit" class="btn__submit">Submit</button>
-        </form>
     </main>
     <!-- FORM -->   
 </body>
