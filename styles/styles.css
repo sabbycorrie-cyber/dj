@@ -1,0 +1,22 @@
+:root {
+    --accent: #d8f2b8;
+    --bg-dark: #0f1210;
+    --surface: #161c18;
+    --text-main: #f0f4ef;
+    --text-muted: #9aa89a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

@@ -3,16 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/index.css">
-    <title>DJ</title>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - DJ Studio</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/normalize.css">
     <style>
         :root {
             --accent: #d8f2b8;
@@ -130,7 +123,6 @@
     </style>
 </head>
 <body>
-
     <header>
         <a href="index.html" class="logo">DJ Studio</a>
         <nav>
@@ -153,28 +145,22 @@
         <p>&copy; 2026 DJ Studio Group Project. All rights reserved.</p>
     </footer>
 
+    <script>
+        const randomColors = ['#d8f2b8', '#b8f2e6', '#f2b8b8', '#f2e2b8', '#e2b8f2'];
+        const interactiveElements = document.querySelectorAll('a, .btn');
+
+        interactiveElements.forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                const randomColor = randomColors[Math.floor(Math.random() * randomColors.length)];
+                element.style.color = randomColor;
+                element.style.borderColor = randomColor;
+            });
+
+            element.addEventListener('mouseleave', () => {
+                element.style.color = '';
+                element.style.borderColor = '';
+            });
+        });
+    </script>
 </body>
-<script>
-    // List of random accent colors to cycle through
-    const randomColors = ['#d8f2b8', '#b8f2e6', '#f2b8b8', '#f2e2b8', '#e2b8f2'];
-
-    // Select all buttons and navigation links
-    const interactiveElements = document.querySelectorAll('a, .btn');
-
-    interactiveElements.forEach(element => {
-        element.addEventListener('mouseenter', () => {
-            // Pick a random color from the array
-            const randomColor = randomColors[Math.floor(Math.random() * randomColors.length)];
-            element.style.color = randomColor;
-            element.style.borderColor = randomColor;
-        });
-
-        // Reset color when the mouse leaves
-        element.addEventListener('mouseleave', () => {
-            element.style.color = '';
-            element.style.borderColor = '';
-        });
-    });
-</script>
 </html>
-</head>
