@@ -108,3 +108,19 @@ footer {
     font-size: 0.9rem;
     border-top: 1px solid rgba(216, 242, 184, 0.05);
 }
+nav ul a {
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+nav ul a:hover {
+    transform: scale(1.35); /* Change this higher (e.g., 1.4 or 1.5) for a bigger effect */
+}
+
+.btn {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.2) translateY(-2px); /* Increase this scale value as well */
+}
