@@ -9,8 +9,11 @@
     height: 220px;
     object-fit: cover;
     border-radius: 6px;
+    border: 3px;
+    border-color: cyan;
     cursor: pointer;
     transition: transform 0.15s ease, opacity 0.15s ease;
+    
 }
 
 .gallery img:hover {
@@ -22,6 +25,7 @@
     position: fixed;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.9);
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,4 +40,8 @@
 
 .lightbox.hidden {
     display: none;
+}
+.blurit {
+    filter: blur(16px);
+    transition: filter 0.3s ease;
 }

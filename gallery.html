@@ -133,19 +133,29 @@
         const lightboxImg = lightbox.querySelector('img');
         const images = document.querySelectorAll('.gallery img');
 
+        const blurTargets = [
+            document.querySelector('header'),
+            document.querySelector('main'),
+            document.querySelector('footer')
+        ];
+
         images.forEach(img => {
             img.addEventListener('click', () => {
                 lightboxImg.src = img.src;
                 lightbox.classList.remove('hidden');
+                blurTargets.forEach(el => el.classList.add('blurit'));
             });
         });
 
-        lightbox.addEventListener('click', () => {
+        function closeLightbox() {
             lightbox.classList.add('hidden');
-        });
+            blurTargets.forEach(el => el.classList.remove('blurit'));
+        }
+
+        lightbox.addEventListener('click', closeLightbox);
 
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') lightbox.classList.add('hidden');
+            if (e.key === 'Escape') closeLightbox();
         });
     </script>
 </body>
