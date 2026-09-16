@@ -1,48 +1,61 @@
-*{
-    box-sizing: border-box;
+:root {
+    --accent: #d8f2b8;
+    --bg-dark: #0f1210;
+    --surface: #161c18;
+    --text-main: #f0f4ef;
+    --text-muted: #9aa89a;
+}
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
 }
 
 body {
-    background-color: #121212; 
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-
-.navbar {
+/* Navigation Header */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1f1f1f;
-    padding: 20px 40px;
-    border-bottom: 2px solid #d8f2b8;
-}
+    padding: 1.5rem 8%;
+    background-color: var(--surface);
+    border-bottom: 1px solid rgba(216, 242, 184, 0.1);
+    }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #d8f2b8;
-    letter-spacing: 2px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-.nav-links a {
-    color: #ffffff;
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: var(--accent);
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease; 
+    letter-spacing: -0.02em;
 }
 
-.nav-links a:hover, .nav-links a.active {
-    color: #d8f2b8;
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
 }
+
+nav ul a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+nav ul a:hover, nav ul a.active {
+    color: var(--accent);
+}
+/* Navigation Header */
 
 .container {
     background-image: url("../images/party.jpg");
@@ -168,4 +181,30 @@ label {
     background-color: #70c40a;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--surface);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(216, 242, 184, 0.05);
+}
+nav ul a {
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+nav ul a:hover {
+    transform: scale(1.35); /* Change this higher (e.g., 1.4 or 1.5) for a bigger effect */
+}
+
+.btn {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.2) translateY(-2px); /* Increase this scale value as well */
 }
