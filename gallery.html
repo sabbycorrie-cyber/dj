@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - DJ Studio</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/gallery.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <style>
+        :root {
+            --accent: #d8f2b8;
+            --bg-dark: #0f1210;
+            --surface: #161c18;
+            --text-main: #f0f4ef;
+            --text-muted: #9aa89a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 8%;
+            background-color: var(--surface);
+            border-bottom: 1px solid rgba(216, 242, 184, 0.1);
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--accent);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav ul a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        nav ul a:hover, nav ul a.active {
+            color: var(--accent);
+        }
+
+        main {
+            flex: 1;
+            padding: 4rem 8%;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            letter-spacing: -0.03em;
+        }
+
+        h1 span {
+            color: var(--accent);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--surface);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(216, 242, 184, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">DJ Studio</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Photo <span>Gallery</span></h1>
+
+        <div class="gallery">
+            <img src="images/party.jpg" alt="Party">
+            <img src="images/party.jpg" alt="Party">
+            <img src="images/party.jpg" alt="Party">
+            <img src="images/party.jpg" alt="Party">
+            <img src="images/party.jpg" alt="Party">
+            <img src="images/party.jpg" alt="Party">
+        </div>
+    </main>
+
+    <div class="lightbox hidden" id="lightbox">
+        <img src="" alt="Lightbox preview">
+    </div>
+
+    <footer>
+        <p>&copy; 2026 DJ Studio Group Project. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = lightbox.querySelector('img');
+        const images = document.querySelectorAll('.gallery img');
+
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.remove('hidden');
+            });
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.add('hidden');
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') lightbox.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
