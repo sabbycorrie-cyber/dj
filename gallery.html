@@ -111,52 +111,43 @@
         <h1>Photo <span>Gallery</span></h1>
 
         <div class="gallery">
-            <img src="images/party.jpg" alt="Party">
-            <img src="images/party.jpg" alt="Party">
-            <img src="images/party.jpg" alt="Party">
-            <img src="images/party.jpg" alt="Party">
-            <img src="images/party.jpg" alt="Party">
-            <img src="images/party.jpg" alt="Party">
+            <span><img src="images/party.jpg" class="thumbnail" onclick="showLightbox(this)" alt="Party">
+            <label>testar lite party kanske</label></span>
+            <span><img src="images/party.jpg" class="thumbnail" onclick="showLightbox(this)" alt="Party">
+            <label>testar lite party kanske</label></span>
+            <span><img src="images/party.jpg" class="thumbnail" onclick="showLightbox(this)" alt="Party">
+            <label>testar lite party kanske</label></span>
+            <span><img src="images/party.jpg" class="thumbnail" onclick="showLightbox(this)" alt="Party">
+            <label>testar lite party kanske</label></span>
+            <span><img src="images/party.jpg" class="thumbnail" onclick="showLightbox(this)" alt="Party">
+            <label>testar lite party kanske</label></span>
+            <span><img src="images/party.jpg" class="thumbnail" onclick="showLightbox(this)" alt="Party">
+            <label>testar lite party kanske</label></span>
         </div>
     </main>
 
-    <div class="lightbox hidden" id="lightbox">
-        <img src="" alt="Lightbox preview">
+
+
+
+
+    <dialog id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Large View" class="lightbox-img" onclick="document.getElementById('lightbox').close()">
     </div>
+    </dialog>
+
+
+    <script>
+        function showLightbox(img) {
+            document.getElementById('lightbox-img').src = img.src;
+            document.getElementById('lightbox').showModal();
+        }
+    </script>
 
     <footer>
         <p>&copy; 2026 DJ Studio Group Project. All rights reserved.</p>
     </footer>
 
-    <script>
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = lightbox.querySelector('img');
-        const images = document.querySelectorAll('.gallery img');
 
-        const blurTargets = [
-            document.querySelector('header'),
-            document.querySelector('main'),
-            document.querySelector('footer')
-        ];
-
-        images.forEach(img => {
-            img.addEventListener('click', () => {
-                lightboxImg.src = img.src;
-                lightbox.classList.remove('hidden');
-                blurTargets.forEach(el => el.classList.add('blurit'));
-            });
-        });
-
-        function closeLightbox() {
-            lightbox.classList.add('hidden');
-            blurTargets.forEach(el => el.classList.remove('blurit'));
-        }
-
-        lightbox.addEventListener('click', closeLightbox);
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeLightbox();
-        });
-    </script>
 </body>
 </html>
