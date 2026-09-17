@@ -13,7 +13,6 @@
     border-color: cyan;
     cursor: pointer;
     transition: transform 0.15s ease, opacity 0.15s ease;
-    
 }
 
 .gallery img:hover {
