@@ -45,7 +45,7 @@ body {
 }
 
 .container {
-    background-image: url("../images/party.jpg");
+    background-color: #0f1210;
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -149,7 +149,7 @@ label {
 }
 
 .btn {
-    background-color: white;
+    background-color: #d8f2b8;
     font-family: roboto, sans-serif;
     font-size: 15px;
     font-weight: bold;
@@ -165,7 +165,7 @@ label {
 }
 
 .btn:hover {
-    background-color: #70c40a;
+    background-color: #baf176;
     text-decoration: none;
     font-weight: bold;
 }
