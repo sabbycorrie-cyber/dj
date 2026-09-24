@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #121212; 
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f1f1f;
+    padding: 20px 40px;
+    border-bottom: 2px solid #d8f2b8;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d8f2b8;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; 
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #d8f2b8;
+}
+
+.about-section {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.about-container h1 {
+    font-size: 36px;
+    color: #d8f2b8;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: #a0a0a0;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.text-box {
+    background-color: #1f1f1f;
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 4px solid #d8f2b8;
+    transition: transform 0.3s ease; /* Hover-effekt för boxarna */
+}
+
+.text-box:hover {
+    transform: translateY(-5px);
+}
+
+.text-box h2 {
+    color: #d8f2b8;
+    margin-bottom: 15px;
+}
+
+.cta-container {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #d8f2b8;
+    color: #121212;
+    padding: 12px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #bce094;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
