@@ -118,7 +118,7 @@ nav ul a {
 }
 
 nav ul a:hover {
-    transform: scale(1.35); /* Change this higher (e.g., 1.4 or 1.5) for a bigger effect */
+    transform: scale(1.75); /* Change this higher (e.g., 1.4 or 1.5) for a bigger effect */
 }
 
 .btn {
