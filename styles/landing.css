@@ -20,6 +20,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 /* Navigation Header */
 header {
     display: flex;
@@ -28,7 +29,7 @@ header {
     padding: 1.5rem 8%;
     background-color: var(--surface);
     border-bottom: 1px solid rgba(216, 242, 184, 0.1);
-    }
+}
 
 .logo {
     font-weight: 800;
@@ -55,6 +56,7 @@ nav ul a {
 nav ul a:hover, nav ul a.active {
     color: var(--accent);
 }
+
 /* Main Content Layout */
 main {
     flex: 1;
@@ -80,6 +82,7 @@ p {
     line-height: 1.6;
     margin-bottom: 2rem;
 }
+
 /* Buttons */
 .btn {
     background-color: var(--accent);
@@ -108,6 +111,7 @@ footer {
     font-size: 0.9rem;
     border-top: 1px solid rgba(216, 242, 184, 0.05);
 }
+
 nav ul a {
     transition: color 0.2s ease, transform 0.2s ease;
     display: inline-block;
@@ -123,4 +127,4 @@ nav ul a:hover {
 
 .btn:hover {
     transform: scale(1.2) translateY(-2px); /* Increase this scale value as well */
-}  
+}
