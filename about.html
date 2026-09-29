@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - DJ Studio</title>
-    <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <title>DJ</title>
     <style>
         :root {
             --accent: #d8f2b8;
@@ -153,11 +152,12 @@
     </style>
 </head>
 <body>
+
     <header>
-        <a href="index.html" class="logo">DJ Studio</a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
+        <nav class="navbar">
+            <div class="logo">DJ BEATS</div>
+            <ul class="nav-links">
+                <li><a href="landing.html">Landing Page</a></li>
                 <li><a href="about.html" class="active">About Us</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
@@ -175,7 +175,7 @@
                     <h2>Who We Are</h2>
                     <p>We are a collective of passionate sound engineers, DJs, and tech innovators dedicated to delivering crystal-clear sound and immersive musical atmospheres. Our mission is to bridge the gap between raw vinyl culture and cutting-edge digital DJ gear.</p>
                 </div>
-
+                
                 <div class="text-box">
                     <h2>Our Product</h2>
                     <p>Our flagship DJ hardware and software ecosystem is built for performance. Featuring ultra-low latency, custom tactile pads, and seamless integration, our product gives you total creative control whether you're in the studio or headlining a festival.</p>
@@ -188,26 +188,5 @@
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2026 DJ Studio Group Project. All rights reserved.</p>
-    </footer>
-
-    <script>
-        const randomColors = ['#d8f2b8', '#b8f2e6', '#f2b8b8', '#f2e2b8', '#e2b8f2'];
-        const interactiveElements = document.querySelectorAll('a, .btn');
-
-        interactiveElements.forEach(element => {
-            element.addEventListener('mouseenter', () => {
-                const randomColor = randomColors[Math.floor(Math.random() * randomColors.length)];
-                element.style.color = randomColor;
-                element.style.borderColor = randomColor;
-            });
-
-            element.addEventListener('mouseleave', () => {
-                element.style.color = '';
-                element.style.borderColor = '';
-            });
-        });
-    </script>
 </body>
 </html>
