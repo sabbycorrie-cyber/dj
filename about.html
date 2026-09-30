@@ -58,12 +58,17 @@
             text-decoration: none;
             font-weight: 600;
             font-size: 0.95rem;
-            transition: color 0.2s ease;
+            transition: color 0.2s ease, transform 0.2s ease;
+            display: inline-block;
         }
 
         nav ul a:hover,
         nav ul a.active {
             color: var(--accent);
+        }
+
+        nav ul a:hover {
+            transform: scale(1.75);
         }
 
         main {
@@ -175,7 +180,7 @@
                     <h2>Who We Are</h2>
                     <p>We are a collective of passionate sound engineers, DJs, and tech innovators dedicated to delivering crystal-clear sound and immersive musical atmospheres. Our mission is to bridge the gap between raw vinyl culture and cutting-edge digital DJ gear.</p>
                 </div>
-                
+
                 <div class="text-box">
                     <h2>Our Product</h2>
                     <p>Our flagship DJ hardware and software ecosystem is built for performance. Featuring ultra-low latency, custom tactile pads, and seamless integration, our product gives you total creative control whether you're in the studio or headlining a festival.</p>
@@ -187,6 +192,22 @@
             </div>
         </div>
     </main>
+
+    <script>
+        const randomColors = ['#d8f2b8', '#b8f2e6', '#f2b8b8', '#f2e2b8', '#e2b8f2'];
+        const headerLinks = document.querySelectorAll('header nav ul a');
+
+        headerLinks.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                const randomColor = randomColors[Math.floor(Math.random() * randomColors.length)];
+                link.style.color = randomColor;
+            });
+
+            link.addEventListener('mouseleave', () => {
+                link.style.color = '';
+            });
+        });
+    </script>
 
 </body>
 </html>

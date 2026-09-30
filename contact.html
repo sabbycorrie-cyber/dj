@@ -59,7 +59,23 @@
                 </form>
         </div>
     </main>
-<!-- FORM -->   
+<!-- FORM -->
+
+    <script>
+        const randomColors = ['#d8f2b8', '#b8f2e6', '#f2b8b8', '#f2e2b8', '#e2b8f2'];
+        const headerLinks = document.querySelectorAll('header nav ul a');
+
+        headerLinks.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                const randomColor = randomColors[Math.floor(Math.random() * randomColors.length)];
+                link.style.color = randomColor;
+            });
+
+            link.addEventListener('mouseleave', () => {
+                link.style.color = '';
+            });
+        });
+    </script>
 
 </body>
 </html>
