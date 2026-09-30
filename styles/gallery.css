@@ -1,3 +1,4 @@
+/* Theme Variables */
 :root {
     --accent: #d8f2b8;
     --bg-dark: #0f1210;
@@ -6,6 +7,7 @@
     --text-muted: #9aa89a;
 }
 
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +15,7 @@
     font-family: system-ui, -apple-system, sans-serif;
 }
 
+/* Base Layout */
 body {
     background-color: var(--bg-dark);
     color: var(--text-main);
@@ -21,6 +24,7 @@ body {
     flex-direction: column;
 }
 
+/* Navigation Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -61,6 +65,7 @@ nav ul a:hover {
     transform: scale(1.75);
 }
 
+/* Main Content Layout */
 main {
     flex: 1;
     padding: 4rem 8%;
@@ -79,6 +84,7 @@ h1 span {
     color: var(--accent);
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 2rem;
@@ -88,6 +94,7 @@ footer {
     border-top: 1px solid rgba(216, 242, 184, 0.05);
 }
 
+/* Photo Gallery */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -110,6 +117,7 @@ footer {
     border-color: var(--accent);
 }
 
+/* Lightbox */
 .lightbox {
   cursor: pointer;
   border: none;

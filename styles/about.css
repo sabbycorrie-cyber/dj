@@ -1,3 +1,4 @@
+/* Theme Variables */
 :root {
     --accent: #d8f2b8;
     --bg-dark: #0f1210;
@@ -6,6 +7,7 @@
     --text-muted: #9aa89a;
 }
 
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +15,7 @@
     font-family: system-ui, -apple-system, sans-serif;
 }
 
+/* Base Layout */
 body {
     background-color: var(--bg-dark);
     color: var(--text-main);
@@ -70,6 +73,7 @@ nav ul a:hover {
     transform: scale(1.75);
 }
 
+/* Main Content Layout */
 main {
     flex: 1;
     padding: 4rem 8%;
@@ -95,6 +99,7 @@ p {
     margin-bottom: 2rem;
 }
 
+/* About Section */
 .about-section {
     padding: 4rem 0;
 }
@@ -118,6 +123,7 @@ p {
     font-size: 18px;
 }
 
+/* Content Grid */
 .content-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -142,6 +148,7 @@ p {
     color: var(--text-main);
 }
 
+/* Call to Action */
 .cta-container {
     text-align: center;
 }
@@ -164,6 +171,7 @@ p {
     transform: translateY(-2px);
 }
 
+/* Responsive */
 @media (max-width: 768px) {
     .content-grid {
         grid-template-columns: 1fr;
