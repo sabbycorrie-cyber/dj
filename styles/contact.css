@@ -83,8 +83,18 @@ nav ul a:hover {
 }
 
 .form__container {
-    background-color: black;
-    border: none;
+    background: linear-gradient(
+        45deg,
+        rgba(216, 242, 184, 0) 0%,
+        rgba(216, 242, 184, 0.22) 42%,
+        rgba(240, 250, 224, 0.32) 50%,
+        rgba(216, 242, 184, 0.22) 58%,
+        rgba(216, 242, 184, 0) 100%
+    ), rgba(216, 242, 184, 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(216, 242, 184, 0.25);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
     border-radius: 30px;
     margin: 30px 0 30px 0;
     max-width: 400px;
@@ -99,7 +109,7 @@ nav ul a:hover {
 
 .contact-us {
     color: white;
-    font-family: roboto, sans-serif;
+    font-family: system-ui, -apple-system, sans-serif;
     font-size: 60px;
     font-weight: bold;
     text-align: center;
